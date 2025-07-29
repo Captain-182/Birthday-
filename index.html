@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Khizer!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 64px;
+      color: #f5c518;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px #f5c518, 0 0 30px #f5c518;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 15px #f5c518, 0 0 30px #f5c518; }
+      to { text-shadow: 0 0 30px #f5c518, 0 0 60px #f5c518; }
+    }
+
+    .subtitle {
+      font-size: 24px;
+      color: #ddd;
+      margin-bottom: 40px;
+    }
+
+    .photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #f5c518;
+      animation: float 4s ease-in-out infinite alternate;
+      transition: 0.4s transform, 0.4s box-shadow;
+      position: relative;
+      z-index: 2;
+    }
+
+    .photo:hover {
+      transform: translateY(-15px) scale(1.08);
+      box-shadow: 0 0 40px #f5c518;
+    }
+
+    .message {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #bbb;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    .stars, .shooting-stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .stars span {
+      position: absolute;
+      display: block;
+      background: #fff;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      animation: twinkle 3s infinite alternate;
+      filter: drop-shadow(0 0 4px #fff);
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.1; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.8); }
+    }
+
+    .shooting-star {
+      position: absolute;
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(to left, transparent, #fff);
+      opacity: 0;
+      filter: blur(1px);
+      border-radius: 50%;
+      animation: shooting 4s linear infinite;
+    }
+
+    .shooting-star::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -3px;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    }
+
+    @keyframes shooting {
+      0% {
+        transform: translateX(-200px) translateY(0) rotate(45deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(1200px) translateY(400px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 20px;
+      color: #999;
+      font-style: italic;
+      position: relative;
+      z-index: 2;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday Khizer!</h1>
+  <p class="subtitle">Born July 29, 2011 — 14 years old 🎉</p>
+
+  <img src="images/khizer.jpg" alt="Khizer's Photo" class="photo">
+
+  <p class="message">
+    Happy 14th Birthday, Khizer! May your love for black always shine with style, strength, and adventure. <br>
+    Keep smiling bright and reaching for the stars. Have an amazing year ahead, champ! 🎂✨🌟
+  </p>
+
+  <div class="stars">
+    <!-- Twinkling stars -->
+    <span style="top:10%; left:20%; animation-delay:0s;"></span>
+    <span style="top:30%; left:70%; animation-delay:0.5s;"></span>
+    <span style="top:80%; left:50%; animation-delay:1s;"></span>
+    <span style="top:60%; left:90%; animation-delay:1.5s;"></span>
+    <span style="top:40%; left:10%; animation-delay:2s;"></span>
+    <span style="top:20%; left:80%; animation-delay:2.5s;"></span>
+    <span style="top:75%; left:30%; animation-delay:3s;"></span>
+    <span style="top:55%; left:60%; animation-delay:3.5s;"></span>
+    <span style="top:35%; left:40%; animation-delay:4s;"></span>
+    <span style="top:15%; left:60%; animation-delay:4.5s;"></span>
+  </div>
+
+  <div class="shooting-stars">
+    <!-- Shooting stars with proper trail -->
+    <div class="shooting-star" style="top:15%; animation-delay: 1s;"></div>
+    <div class="shooting-star" style="top:35%; animation-delay: 3s;"></div>
+    <div class="shooting-star" style="top:55%; animation-delay: 5s;"></div>
+  </div>
+
+  <p class="footer">From your loving Father</p>
+
+</body>
+</html>
